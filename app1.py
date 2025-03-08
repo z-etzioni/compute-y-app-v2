@@ -13,19 +13,10 @@ st.title("Projecting the Salaries of Economics Professors")
 st.subheader("This web tool projects the expected salary of Economics professors at colleges across the United States based on a model which accounts for the main determinants of base pay.")
 
 st.text("In our view, these are:")
-
-st.markdown('<p class="input-label">Number of Years since PhD Completion (T):</p>', unsafe_allow_html=True)
-T = st.number_input("", value=0, min_value=0, step=1, format="%d")
-
-st.markdown('<p class="input-label">Number of Publications (N_pub):</p>', unsafe_allow_html=True)
-N_pub = st.number_input("", value=0, min_value=0, step=1, format="%d")
-
-st.markdown('<p class="input-label">Top 5 Publications (N_top5):</p>', unsafe_allow_html=True)
-N_top5 = st.number_input("", value=0, min_value=0, step=1, format="%d")
-
-st.markdown('<p class="salary-output">💰 Your expected salary is: </p>', unsafe_allow_html=True)
-st.success(f"<p class='salary-output'>${salary:,.2f}</p>", unsafe_allow_html=True)
-
+st.text("1. The total number of years since completing your PhD")
+st.text("2. Your total number of publications in academic journals")
+st.text("3. Your total number of publications in the top 5 Economics journals")
+st.text("4. Your status as an Associate or Full Professor")
 
 st.text("The model is based on the below equation: ") 
 st.latex(r"""
