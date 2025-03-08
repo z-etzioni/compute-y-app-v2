@@ -14,10 +14,18 @@ st.subheader("This web tool projects the expected salary of Economics professors
 
 st.text("In our view, these are:")
 
-st.text("1. The number of years since completion of PhD")
-st.text("2. The total number of publications across all journals")
-st.text("3. The total number of publications in the top 5 Economics journals")
-st.text("4. Status as an Associate or Full Professor")
+st.markdown('<p class="input-label">Number of Years since PhD Completion (T):</p>', unsafe_allow_html=True)
+T = st.number_input("", value=0, min_value=0, step=1, format="%d")
+
+st.markdown('<p class="input-label">Number of Publications (N_pub):</p>', unsafe_allow_html=True)
+N_pub = st.number_input("", value=0, min_value=0, step=1, format="%d")
+
+st.markdown('<p class="input-label">Top 5 Publications (N_top5):</p>', unsafe_allow_html=True)
+N_top5 = st.number_input("", value=0, min_value=0, step=1, format="%d")
+
+st.markdown('<p class="salary-output">💰 Your expected salary is: </p>', unsafe_allow_html=True)
+st.success(f"<p class='salary-output'>${salary:,.2f}</p>", unsafe_allow_html=True)
+
 
 st.text("The model is based on the below equation: ") 
 st.latex(r"""
