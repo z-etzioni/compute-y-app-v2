@@ -9,14 +9,9 @@ def compute_y(T, N_pub, N_top5, D_assoc, D_full):
 # Page Configuration
 st.set_page_config(page_title="Compute Projected Salary", page_icon="📈", layout="centered")
 
-st.subheader("This web tool projects the expected salary of Economics professors at colleges across the United States 
-    based on a model which accounts for the main determinants of base pay.")
+st.subheader("This web tool projects the expected salary of Economics professors at colleges across the United States based on a model which accounts for the main determinants of base pay.")
 
-st.text("In our view, these are:
-            1. The number of years since completion of PhD
-            2. The total number of publications across all journals
-            3. The total number of publications in the top 5 Economics journals
-            4. Status as an Associate or Full Professor")
+st.text("In our view, these are: 1. The number of years since completion of PhD, 2. The total number of publications across all journals, 3. The total number of publications in the top 5 Economics journals, 4. Status as an Associate or Full Professor")
 
 st.markdown("""
     <style>
