@@ -51,6 +51,11 @@ st.markdown("""
             color: white !important;
             font-weight: 600;
         }
+        .stRadio div[role="radiogroup"] label {
+            color: white !important;
+            font-size: 16px;
+            font-weight: bold;
+        }
         .stNumberInput, .stRadio {
             background: #1E1E1E;
             color: white;
@@ -73,6 +78,11 @@ st.markdown("""
         .stNumberInput label, .stRadio label {
             color: black !important;
             font-weight: 600;
+        }
+        .stRadio div[role="radiogroup"] label {
+            color: black !important;
+            font-size: 16px;
+            font-weight: bold;
         }
         .stNumberInput, .stRadio {
             background: #F0F0F0;
