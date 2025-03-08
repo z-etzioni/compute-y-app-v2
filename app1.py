@@ -7,7 +7,7 @@ def compute_y(T, N_pub, N_top5, D_assoc, D_full):
     return math.exp(log_y)  # Convert log y to y
 
 # Page Configuration
-st.set_page_config(page_title="Compute Projected Salary", page_icon="🌙", layout="centered")
+st.set_page_config(page_title="Compute Projected Salary", page_icon="📈", layout="centered")
 
 # Custom CSS for Dark Mode + New Font
 st.markdown("""
@@ -65,13 +65,13 @@ with st.container():
     col1, col2 = st.columns(2)
 
     with col1:
-        T = st.number_input("Temperature (T)", value=0.0, format="%.2f")
-        N_pub = st.number_input("Number of Publications (N_pub)", value=0.0, format="%.2f")
+        T = st.number_input("Number of Years since PhD Completion (T)", value=0.0, format="%.2f")
+        N_pub = st.number_input("Total Number of Publications (N_pub)", value=0.0, format="%.2f")
 
     with col2:
-        N_top5 = st.number_input("Top 5 Publications (N_top5)", value=0.0, format="%.2f")
-        D_assoc = st.radio("Is Associate? (D_assoc)", [0, 1])
-        D_full = st.radio("Is Full? (D_full)", [0, 1])
+        N_top5 = st.number_input("Number of Publications in Top 5 Journals (N_top5)", value=0.0, format="%.2f")
+        D_assoc = st.radio("Are you currently an Associate Professor (1 for Yes)? (D_assoc)", [0, 1])
+        D_full = st.radio("Are you currently a Full Professor (1 for Yes)? (D_full)", [0, 1])
 
 # Compute Button
 if st.button("🔍 Compute"):
