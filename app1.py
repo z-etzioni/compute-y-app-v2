@@ -81,10 +81,10 @@ with st.container():
     col1, col2 = st.columns(2)
 
     with col1:
-        T = st.number_input("Number of Years since PhD Completion (T)", value=0, min_value=0, step=1, format="%d")
-        N_pub = st.number_input("Number of Publications (N_pub)", value=0, min_value=0, step=1, format="%d")
+        T = st.number_input("Number of Years since PhD Completion (T)", min_value=0, step=1, format="%d")
+        N_pub = st.number_input("Number of Publications (N_pub)", min_value=0, step=1, format="%d")
     with col2:
-        N_top5 = st.number_input("Number of Publications in Top 5 Journals(N_top5)", value=0, min_value=0, step=1, format="%d")
+        N_top5 = st.number_input("Number of Publications in Top 5 Journals(N_top5)", min_value=0, step=1, format="%d")
         D_assoc = st.radio("Are you an Associate Professor? (D_assoc)", [0, 1])
         D_full = st.radio("Are you a Full Professor? (D_full)", [0, 1])
 
