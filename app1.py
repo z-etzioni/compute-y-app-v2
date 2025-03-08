@@ -47,6 +47,10 @@ st.markdown("""
         }
         .main-title { color: #FFD700; }  /* Gold Title in Dark Mode */
         .sub-text { color: #DDDDDD; }  /* Lighter Gray for Readability */
+        .stNumberInput label, .stRadio label {
+            color: white !important;
+            font-weight: 600;
+        }
         .stNumberInput, .stRadio {
             background: #1E1E1E;
             color: white;
@@ -66,6 +70,10 @@ st.markdown("""
         }
         .main-title { color: #1E1E1E; }  /* Dark Title in Light Mode */
         .sub-text { color: #333333; }
+        .stNumberInput label, .stRadio label {
+            color: black !important;
+            font-weight: 600;
+        }
         .stNumberInput, .stRadio {
             background: #F0F0F0;
             color: black;
@@ -102,6 +110,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 # Title and Description
 st.markdown('<p class="main-title">Compute Projected Salary</p>', unsafe_allow_html=True)
