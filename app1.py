@@ -81,13 +81,13 @@ with st.container():
     col1, col2 = st.columns(2)
 
     with col1:
-        T = st.number_input("Number of Years since PhD Completion (T)", value=0.0, format="%.2f")
-        N_pub = st.number_input("Total Number of Publications (N_pub)", value=0.0, format="%.2f")
-
+        T = st.number_input("Number of Years since PhD Completion (T)", value=0, min_value=0, step=1, format="%d")
+        N_pub = st.number_input("Number of Publications (N_pub)", value=0, min_value=0, step=1, format="%d")
     with col2:
-        N_top5 = st.number_input("Number of Publications in Top 5 Journals (N_top5)", value=0.0, format="%.2f")
-        D_assoc = st.radio("Are you currently an Associate Professor (1 for Yes)? (D_assoc)", [0, 1])
-        D_full = st.radio("Are you currently a Full Professor (1 for Yes)? (D_full)", [0, 1])
+        N_top5 = st.number_input("Number of Publications in Top 5 Journals(N_top5)", value=0, min_value=0, step=1, format="%d")
+        D_assoc = st.radio("Are you an Associate Professor? (D_assoc)", [0, 1])
+        D_full = st.radio("Are you a Full Professor? (D_full)", [0, 1])
+
 
 # Compute Button
 if st.button("🔍 Compute Salary"):
