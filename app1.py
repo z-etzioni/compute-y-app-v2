@@ -144,8 +144,8 @@ with st.container():
     
     with col2:
         N_top5 = st.number_input("Number of Publications in Top 5 Journals (N_top5)", min_value=0, step=1, format="%d")
-        D_assoc = st.radio("Are you an Associate Professor? (D_assoc)", [0, 1])
-        D_full = st.radio("Are you a Full Professor? (D_full)", [0, 1])
+        D_assoc = st.radio("Are you currently an Associate Professor? (D_assoc)", [0, 1])
+        D_full = st.radio("Are you currently a Full Professor? (D_full)", [0, 1])
 
 
 # Compute Button
