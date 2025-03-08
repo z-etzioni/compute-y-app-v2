@@ -14,16 +14,32 @@ st.subheader("This web tool projects the expected salary of Economics professors
 
 st.markdown("""
     <style>
-    .highlight-text {
-        font-size: 18px;
-        font-weight: bold;
-        color: #1DB954; /* Spotify Green for contrast */
-        padding: 5px;
+    @media (prefers-color-scheme: dark) {
+        .highlight-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #FFFFFF !important;  /* White text in dark mode */
+            padding: 5px;
+        }
+        .list-text {
+            font-size: 18px;
+            color: #DDDDDD !important;  /* Light gray for readability */
+            padding-left: 15px;
+        }
     }
-    .list-text {
-        font-size: 16px;
-        color: white; 
-        padding-left: 15px;
+
+    @media (prefers-color-scheme: light) {
+        .highlight-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000000 !important;  /* Black text in light mode */
+            padding: 5px;
+        }
+        .list-text {
+            font-size: 18px;
+            color: #333333 !important;  /* Dark gray for readability */
+            padding-left: 15px;
+        }
     }
     </style>
 """, unsafe_allow_html=True)
@@ -33,6 +49,7 @@ st.markdown('<p class="list-text">1️⃣ The total number of years since comple
 st.markdown('<p class="list-text">2️⃣ Your total number of publications in academic journals</p>', unsafe_allow_html=True)
 st.markdown('<p class="list-text">3️⃣ Your total number of publications in the top 5 Economics journals</p>', unsafe_allow_html=True)
 st.markdown('<p class="list-text">4️⃣ Your status as an Associate or Full Professor</p>', unsafe_allow_html=True)
+
 
 
 st.markdown("""
