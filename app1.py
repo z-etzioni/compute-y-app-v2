@@ -7,7 +7,7 @@ def compute_y(T, N_pub, N_top5, D_assoc, D_full):
     return math.exp(log_y)  # Convert log y to y
 
 # Page Configuration
-st.set_page_config(page_title="Compute y", page_icon="🌙", layout="centered")
+st.set_page_config(page_title="Compute Projected Salary", page_icon="🌙", layout="centered")
 
 # Custom CSS for Dark Mode + New Font
 st.markdown("""
@@ -57,7 +57,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title and Description
-st.markdown('<p class="main-title">🌙 Compute y</p>', unsafe_allow_html=True)
+st.markdown('<p class="main-title">Compute Projected Salary</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-text">Enter your values below and click Compute.</p>', unsafe_allow_html=True)
 
 # Use containers for better structure
