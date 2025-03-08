@@ -9,6 +9,7 @@ def compute_y(T, N_pub, N_top5, D_assoc, D_full):
 # Page Configuration
 st.set_page_config(page_title="Compute Projected Salary", page_icon="📈", layout="centered")
 
+st.title("Projecting the Salaries of Economics Professors")
 st.subheader("This web tool projects the expected salary of Economics professors at colleges across the United States based on a model which accounts for the main determinants of base pay.")
 
 st.text("In our view, these are:")
