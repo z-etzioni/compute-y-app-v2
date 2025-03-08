@@ -12,11 +12,28 @@ st.set_page_config(page_title="Compute Projected Salary", page_icon="📈", layo
 st.title("Projecting the Salaries of Economics Professors")
 st.subheader("This web tool projects the expected salary of Economics professors at colleges across the United States based on a model which accounts for the main determinants of base pay.")
 
-st.text("In our view, these are:")
-st.text("1. The total number of years since completing your PhD")
-st.text("2. Your total number of publications in academic journals")
-st.text("3. Your total number of publications in the top 5 Economics journals")
-st.text("4. Your status as an Associate or Full Professor")
+st.markdown("""
+    <style>
+    .highlight-text {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1DB954; /* Spotify Green for contrast */
+        padding: 5px;
+    }
+    .list-text {
+        font-size: 16px;
+        color: white; 
+        padding-left: 15px;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+st.markdown('<p class="highlight-text">In our view, these are:</p>', unsafe_allow_html=True)
+st.markdown('<p class="list-text">1️⃣ The total number of years since completing your PhD</p>', unsafe_allow_html=True)
+st.markdown('<p class="list-text">2️⃣ Your total number of publications in academic journals</p>', unsafe_allow_html=True)
+st.markdown('<p class="list-text">3️⃣ Your total number of publications in the top 5 Economics journals</p>', unsafe_allow_html=True)
+st.markdown('<p class="list-text">4️⃣ Your status as an Associate or Full Professor</p>', unsafe_allow_html=True)
+
 
 st.text("The model is based on the below equation: ") 
 st.latex(r"""
