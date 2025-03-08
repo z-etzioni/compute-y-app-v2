@@ -4,7 +4,7 @@ import math
 # Function to compute y
 def compute_y(T, N_pub, N_top5, D_assoc, D_full):
     log_y = 12.14 - 0.0104 * T + 0.0053 * N_pub + 0.0206 * N_top5 + 0.2269 * D_assoc + 0.4877 * D_full
-    return math.exp(log_y)  # Convert log y to y
+    return round(math.exp(log_y), 2)  # Convert log y to y
 
 # Page Configuration
 st.set_page_config(page_title="Compute Projected Salary", page_icon="📈", layout="centered")
@@ -90,7 +90,7 @@ with st.container():
         D_full = st.radio("Are you currently a Full Professor (1 for Yes)? (D_full)", [0, 1])
 
 # Compute Button
-if st.button("🔍 Compute"):
-    result = compute_y(T, N_pub, N_top5, D_assoc, D_full)
-    st.success(f"✅ Computed y = {result:.4f}")
+if st.button("🔍 Compute Salary"):
+    salary = compute_y(T, N_pub, N_top5, D_assoc, D_full)
+    st.success(f"💰 Your expected salary is **${salary:,.2f}**")
 
