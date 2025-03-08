@@ -9,8 +9,8 @@ def compute_y(T, N_pub, N_top5, D_assoc, D_full):
 # Page Configuration
 st.set_page_config(page_title="Compute Projected Salary", page_icon="📈", layout="centered")
 
-st.title("Projecting the Salaries of Economics Professors")
-st.subheader("This web tool projects the expected salary of Economics professors at colleges across the United States based on a model which accounts for the main determinants of base pay.")
+st.title("Projected Base Salaries of Economics Professors in the United States")
+st.subheader("This tool estimates the expected base salary of economics professors at higher education institutions across the United States. The model accounts for key determinants of compensation, including academic tenure, research output, and publication record.")
 
 st.markdown("""
     <style>
@@ -44,7 +44,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<p class="highlight-text">In our view, these are:</p>', unsafe_allow_html=True)
+st.markdown('<p class="highlight-text">The variables to input are listed below:</p>', unsafe_allow_html=True)
 st.markdown('<p class="list-text">1️⃣ The total number of years since completing your PhD</p>', unsafe_allow_html=True)
 st.markdown('<p class="list-text">2️⃣ Your total number of publications in academic journals</p>', unsafe_allow_html=True)
 st.markdown('<p class="list-text">3️⃣ Your total number of publications in the top 5 Economics journals</p>', unsafe_allow_html=True)
