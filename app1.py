@@ -1,12 +1,10 @@
 import streamlit as st
 import math
 
-# Function to compute y
 def compute_y(T, N_pub, N_top5, D_assoc, D_full):
     log_y = 12.14 - 0.0104 * T + 0.0053 * N_pub + 0.0206 * N_top5 + 0.2269 * D_assoc + 0.4877 * D_full
-    return round(math.exp(log_y), 2)  # Convert log y to y
+    return round(math.exp(log_y), 2) 
 
-# Page Configuration
 st.set_page_config(page_title="Compute Projected Salary", page_icon="📈", layout="centered")
 
 st.title("Projected Base Salaries of Economics Professors in the United States")
@@ -139,11 +137,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# Title and Description
 st.markdown('<p class="main-title">Compute Projected Salary</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-text">Enter your values below and click Compute.</p>', unsafe_allow_html=True)
 
-# Display the equation
 st.markdown('<p class="sub-text">The model is based on the equation below:</p>', unsafe_allow_html=True)
 st.latex(r"""
 \log y = 12.14 - 0.0104T + 0.0053N_{\text{pub}} + 0.0206N_{\text{top5}} + 0.2269D_{\text{assoc}} + 0.4877D_{\text{full}}
@@ -151,7 +147,6 @@ st.latex(r"""
 
 st.subheader("Input each of these values below to determine your projected salary!")
 
-# Use containers for better structure
 with st.container():
     col1, col2 = st.columns(2)
 
@@ -165,7 +160,6 @@ with st.container():
         D_full = st.radio("Are you currently a Full Professor? (D_full)", [0, 1])
 
 
-# Compute Button
 if st.button("🔍 Compute Salary"):
     salary = compute_y(T, N_pub, N_top5, D_assoc, D_full)
     st.success(f"💰 Your expected salary is **${salary:,.2f}**")
