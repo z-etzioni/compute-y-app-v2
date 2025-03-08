@@ -18,7 +18,7 @@ st.text("2. The total number of publications across all journals")
 st.text("3. The total number of publications in the top 5 Economics journals")
 st.text("4. Status as an Associate or Full Professor")
 
-st.text("Input each of these values below to determine your projected salary!")
+st.subheader("Input each of these values below to determine your projected salary!")
 
 st.markdown("""
     <style>
