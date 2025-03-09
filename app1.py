@@ -144,7 +144,7 @@ st.markdown('<p class="sub-text">The model is based on the equation below:</p>',
 st.latex(r"""
 \log y = 12.14 - 0.0104T + 0.0053N_{\text{pub}} + 0.0206N_{\text{top5}} + 0.2269D_{\text{assoc}} + 0.4877D_{\text{full}}
 """)
-st.caption(""Source: Lyu and Toda "Publications, Citations, Position, and Compensation of Economics Professor", Econ Journal Watch, 2019. Equation updated to 2023 at https://alexisakira.github.io/publications/2019-EJW/ .")
+st.caption('Source: Lyu and Toda "Publications, Citations, Position, and Compensation of Economics Professor", Econ Journal Watch, 2019. Equation updated to 2023 at https://alexisakira.github.io/publications/2019-EJW/.')
 
 st.subheader("Input each of these values below to determine your projected salary!")
 
