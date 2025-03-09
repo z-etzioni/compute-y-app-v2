@@ -3,7 +3,7 @@ import math
 
 def compute_y(T, N_pub, N_top5, D_assoc, D_full):
     log_y = 12.14 - 0.0104 * T + 0.0053 * N_pub + 0.0206 * N_top5 + 0.2269 * D_assoc + 0.4877 * D_full
-    return round(math.exp(log_y), 2) 
+    return round(math.exp(log_y), 4) 
 
 st.set_page_config(page_title="Compute Projected Salary", page_icon="📈", layout="centered")
 
@@ -44,7 +44,7 @@ st.markdown("""
 
 st.markdown('<p class="highlight-text">The variables to input are listed below:</p>', unsafe_allow_html=True)
 st.markdown('<p class="list-text">1️⃣ The total number of years since completing your PhD</p>', unsafe_allow_html=True)
-st.markdown('<p class="list-text">2️⃣ Your total number of publications in academic journals</p>', unsafe_allow_html=True)
+st.markdown('<p class="list-text">2️⃣ Your total number of publications in academic journals (only peer-reviewed research or review articles that you normally include in your CV - exclude conference proceedings, comments, corrigenda, etc.)</p>', unsafe_allow_html=True)
 st.markdown('<p class="list-text">3️⃣ Your total number of publications in the top 5 Economics journals</p>', unsafe_allow_html=True)
 st.markdown('<p class="list-text">4️⃣ Your status as an Associate or Full Professor</p>', unsafe_allow_html=True)
 
@@ -144,6 +144,7 @@ st.markdown('<p class="sub-text">The model is based on the equation below:</p>',
 st.latex(r"""
 \log y = 12.14 - 0.0104T + 0.0053N_{\text{pub}} + 0.0206N_{\text{top5}} + 0.2269D_{\text{assoc}} + 0.4877D_{\text{full}}
 """)
+st.caption(""Source: Lyu and Toda "Publications, Citations, Position, and Compensation of Economics Professor", Econ Journal Watch, 2019. Equation updated to 2023 at https://alexisakira.github.io/publications/2019-EJW/ .")
 
 st.subheader("Input each of these values below to determine your projected salary!")
 
@@ -156,8 +157,8 @@ with st.container():
     
     with col2:
         N_top5 = st.number_input("Number of Publications in Top 5 Journals (N_top5)", min_value=0, step=1, format="%d")
-        D_assoc = st.radio("Are you currently an Associate Professor? (D_assoc)", [0, 1])
-        D_full = st.radio("Are you currently a Full Professor? (D_full)", [0, 1])
+        D_assoc = st.radio("Are you currently an Associate Professor 0 (No) or 1 (Yes)? (D_assoc)", [0, 1])
+        D_full = st.radio("Are you currently a Full Professor 0 (No) or 1 (Yes)? (D_full)", [0, 1])
 
 
 if st.button("🔍 Compute Salary"):
