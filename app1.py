@@ -163,5 +163,5 @@ with st.container():
 
 if st.button("🔍 Compute Salary"):
     salary = compute_y(T, N_pub, N_top5, D_assoc, D_full)
-    st.success(f"💰 Your expected salary is **${salary:,.2f}**")
+    st.success(f"💰 Your expected salary is **${salary:,}**")
 
