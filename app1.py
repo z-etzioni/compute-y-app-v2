@@ -3,7 +3,7 @@ import math
 
 def compute_y(T, N_pub, N_top5, D_assoc, D_full):
     log_y = 12.14 - 0.0104 * T + 0.0053 * N_pub + 0.0206 * N_top5 + 0.2269 * D_assoc + 0.4877 * D_full
-    return round(math.exp(log_y)) 
+    return int(round(math.exp(log_y)))
 
 st.set_page_config(page_title="Compute Projected Salary", page_icon="📈", layout="centered")
 
